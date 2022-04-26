@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("JSON")
+        print("FeatureBranch")
         // Do any additional setup after loading the view.
     }
 
