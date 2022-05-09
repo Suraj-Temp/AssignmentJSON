@@ -11,7 +11,7 @@
         <!--Posts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" title="Posts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="AssignmentJSON" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Posts" id="BYZ-38-t0r" customClass="MainViewController" customModule="AssignmentJSON" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,21 +108,20 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh9-Qe-gOv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
                                                             <string key="text">quia molestiae reprehenderit quasi aspernaturnaut expedita occaecati aliquam eveniet laudantiumnomnis quibusdam delectus saepe quia accusamus maiores nam estncum et ducimus et vero voluptates excepturi deleniti ratione</string>
                                                             <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vero eaque aliquid doloribus et culpa" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1w-WU-QHs">
-                                                            <rect key="frame" x="0.0" y="75.5" width="414" height="14"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <rect key="frame" x="0.0" y="77" width="414" height="13.5"/>
                                                             <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vero eaque aliquid doloribus et culpa" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrv-aZ-jjv">
-                                                            <rect key="frame" x="0.0" y="92" width="414" height="14"/>
+                                                            <rect key="frame" x="0.0" y="100.5" width="414" height="5.5"/>
                                                             <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -145,10 +144,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="YEt-cL-WcP" id="wTu-Be-Hbe"/>
-                                    <outlet property="delegate" destination="YEt-cL-WcP" id="49R-DJ-drH"/>
-                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJa-fX-ezV">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -174,9 +169,6 @@
                             <constraint firstItem="zJa-fX-ezV" firstAttribute="leading" secondItem="qH3-kh-bfT" secondAttribute="leading" id="wgp-KZ-hld"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="tblView" destination="pao-Y5-fWz" id="NW3-FS-vyz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6s-28-9u1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

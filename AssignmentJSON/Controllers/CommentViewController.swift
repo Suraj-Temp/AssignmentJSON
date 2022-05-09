@@ -26,6 +26,7 @@ class CommentViewController: UIViewController,UITableViewDelegate,UITableViewDat
          navigationController?.navigationBar.isHidden = true
          viewModelComments.vc2 = self
          viewModelComments.postsDetails = false
+         print(modelIden,"modelId")
          self.viewModelComments.getAllUserData()
         
 //        if viewModelComments.arrComments.count != 0{
@@ -44,10 +45,9 @@ class CommentViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCell(withIdentifier: "CommentsTableViewCell", for: indexPath) as? CommentsTableViewCell
-
      if viewModelComments.arrComments.count != 0{
           for id in 0...viewModelComments.arrComments.count-1{
-              if modelPosts == viewModelComments.arrComments[id].id{
+              if modelIden == viewModelComments.arrComments[id].id{
                  print(modelPosts as Any,"x",viewModelComments.arrComments[id].id as Any)
                 let modelComments = viewModelComments.arrComments[id]
                 cell?.modelComments  =  modelComments
@@ -66,7 +66,9 @@ class CommentViewController: UIViewController,UITableViewDelegate,UITableViewDat
 //        }
 //    }
     @IBAction func back(_ sender: UIBarButtonItem) {
-        self.navigationController?.popViewController(animated: true)
+        modelIden = Int()
+        Utils.navToStoryboard(currentController: self, storyboard: "Main", modelId: Int())
+//        self.navigationController?.popViewController(animated: true)
     }
     
 }

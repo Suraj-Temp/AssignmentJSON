@@ -48,7 +48,7 @@ class PostsCommentsModel{
                      self.arrComments.append(comments)
                      //print(self.arrComments,"comments")
                      }
-                  DispatchQueue.main.async {
+                       DispatchQueue.main.async { [self] in
                        self.vc?.removeLoader()
                        self.vc2?.tblView.reloadData()
                      }
@@ -70,7 +70,7 @@ class PostsCommentsModel{
                  catch{
                    print(error.localizedDescription)
                   }
-           }
+            }
            else{
                print(err?.localizedDescription,"error")
            }

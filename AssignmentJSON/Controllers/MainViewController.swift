@@ -7,8 +7,18 @@
 //
 
 import UIKit
-
 var postsModelData = [PostsModel]()
+var modelIden = Int()
+class Utils {
+    class func navToStoryboard(currentController:UIViewController, storyboard:String,modelId:Int) {
+    let storyboard1 = UIStoryboard(name: storyboard, bundle: nil)
+    let controller = storyboard1.instantiateInitialViewController()! as UIViewController
+         modelIden = modelId
+        controller.modalPresentationStyle = .fullScreen
+        currentController.present(controller, animated: true, completion: nil)
+    }
+}
+
 class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
 {
@@ -30,7 +40,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
       if let customView = Bundle.main.loadNibNamed("SplashLoader", owner: self, options: nil)?.first as? SplashLoader {
             customView.frame = self.view.frame
             customView.tag   = 150
-         self.view.addSubview(customView)
+            self.view.addSubview(customView)
         }
     }
     
@@ -53,10 +63,13 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return UITableView.automaticDimension
      }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         let CommentViewController = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
-         let modelPosts = viewModelUser.arrPosts[indexPath.row]
-        CommentViewController.modelPosts = modelPosts.id
-    self.navigationController?.pushViewController(CommentViewController, animated: true)
+//         let CommentViewController = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
+          let modelPosts = viewModelUser.arrPosts[indexPath.row]
+//        CommentViewController.modelPosts = modelPosts.id
+        print(modelPosts.id,"id")
+//    self.navigationController?.pushViewController(CommentViewController, animated: true)
+        Utils.navToStoryboard(currentController: self, storyboard: "CommentViewController", modelId: modelPosts.id!)
+
     }
 
 }

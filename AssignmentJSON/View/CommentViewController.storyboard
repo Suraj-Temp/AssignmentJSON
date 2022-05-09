@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Comment View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CommentViewController" customModule="AssignmentJSON" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fZC-nz-QPj">
+                                <rect key="frame" x="0.0" y="248" width="414" height="400"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Zh4-9O-UrW"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentsTableViewCell" rowHeight="106" id="Kbi-PA-VT2" customClass="CommentsTableViewCell" customModule="AssignmentJSON" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="106"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kbi-PA-VT2" id="JVI-SS-rlt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q4F-8y-9N6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cun-cz-aPi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                                            <string key="text">quia molestiae reprehenderit quasi aspernaturnaut expedita occaecati aliquam eveniet laudantiumnomnis quibusdam delectus saepe quia accusamus maiores nam estncum et ducimus et vero voluptates excepturi deleniti ratione</string>
+                                                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vero eaque aliquid doloribus et culpa" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnV-qL-vGp">
+                                                            <rect key="frame" x="0.0" y="77" width="414" height="13.5"/>
+                                                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vero eaque aliquid doloribus et culpa" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QG8-S6-IDU">
+                                                            <rect key="frame" x="0.0" y="100.5" width="414" height="5.5"/>
+                                                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Q4F-8y-9N6" firstAttribute="top" secondItem="JVI-SS-rlt" secondAttribute="top" id="E06-On-Ygv"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q4F-8y-9N6" secondAttribute="bottom" id="FQX-M8-V6s"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q4F-8y-9N6" secondAttribute="trailing" id="Krm-N6-qI5"/>
+                                                <constraint firstItem="Q4F-8y-9N6" firstAttribute="leading" secondItem="JVI-SS-rlt" secondAttribute="leading" id="NLD-O4-Ydr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="commentsLbl" destination="cun-cz-aPi" id="mFP-HQ-uCF"/>
+                                            <outlet property="emailLbl" destination="OnV-qL-vGp" id="vM8-gq-Bqc"/>
+                                            <outlet property="nameLbl" destination="QG8-S6-IDU" id="5nN-EG-axS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="Vej-Uc-Kjt"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="I1x-YL-oao"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FnU-2k-6R8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Comments" id="ZzD-su-4wm">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="U3z-mY-j2c">
+                                            <connections>
+                                                <action selector="back:" destination="Y6W-OH-hqX" id="d4S-vO-L53"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FnU-2k-6R8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DMQ-b2-vIU"/>
+                            <constraint firstItem="FnU-2k-6R8" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="EV2-Nt-w5R"/>
+                            <constraint firstItem="fZC-nz-QPj" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Pvq-BN-ygF"/>
+                            <constraint firstItem="fZC-nz-QPj" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UVf-iT-UC4"/>
+                            <constraint firstItem="fZC-nz-QPj" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Uin-Ha-BdC"/>
+                            <constraint firstItem="fZC-nz-QPj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fe4-iY-dH7"/>
+                            <constraint firstItem="FnU-2k-6R8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="t3A-EV-TV6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblView" destination="fZC-nz-QPj" id="Pk9-6v-ay3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-243" y="51"/>
+        </scene>
+    </scenes>
+</document>

@@ -22,6 +22,7 @@
 		10B54C6128199F0E003CD2B7 /* SplashLoader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B54C6028199F0E003CD2B7 /* SplashLoader.xib */; };
 		10B54C6328199F61003CD2B7 /* SplashLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B54C6228199F61003CD2B7 /* SplashLoader.swift */; };
 		4B8433942824F8AA00234715 /* UrlSessionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8433932824F8AA00234715 /* UrlSessionDataModel.swift */; };
+		4B8433D82828ECB000234715 /* CommentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8433D72828ECB000234715 /* CommentViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		10B54C6028199F0E003CD2B7 /* SplashLoader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashLoader.xib; sourceTree = "<group>"; };
 		10B54C6228199F61003CD2B7 /* SplashLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLoader.swift; sourceTree = "<group>"; };
 		4B8433932824F8AA00234715 /* UrlSessionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionDataModel.swift; sourceTree = "<group>"; };
+		4B8433D72828ECB000234715 /* CommentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommentViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				10B54C5E281967F8003CD2B7 /* CommentsTableViewCell.swift */,
 				10B54C6028199F0E003CD2B7 /* SplashLoader.xib */,
 				10B54C6228199F61003CD2B7 /* SplashLoader.swift */,
+				4B8433D72828ECB000234715 /* CommentViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				10B54C432817D071003CD2B7 /* LaunchScreen.storyboard in Resources */,
 				10B54C402817D071003CD2B7 /* Assets.xcassets in Resources */,
+				4B8433D82828ECB000234715 /* CommentViewController.storyboard in Resources */,
 				10B54C3E2817D055003CD2B7 /* Main.storyboard in Resources */,
 				10B54C6128199F0E003CD2B7 /* SplashLoader.xib in Resources */,
 			);
