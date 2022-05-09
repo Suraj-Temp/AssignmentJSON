@@ -28,15 +28,15 @@ class CommentViewController: UIViewController,UITableViewDelegate,UITableViewDat
          viewModelComments.postsDetails = false
          self.viewModelComments.getAllUserData()
         
-        if viewModelComments.arrComments.count != 0{
-             for id in 0...viewModelComments.arrComments.count-1{
-                 if modelPosts == viewModelComments.arrComments[id].id{
-                    print(modelPosts as Any,"compare",viewModelComments.arrComments[id].id as Any)
-                     let modelComments = viewModelComments.arrComments[id]
-                    commentLbl.text = modelComments.body
-                }
-            }
-        }
+//        if viewModelComments.arrComments.count != 0{
+//             for id in 0...viewModelComments.arrComments.count-1{
+//                 if modelPosts == viewModelComments.arrComments[id].id{
+//                    print(modelPosts as Any,"compare",viewModelComments.arrComments[id].id as Any)
+//                     let modelComments = viewModelComments.arrComments[id]
+//                    commentLbl.text = modelComments.body
+//                }
+//            }
+//        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -56,13 +56,16 @@ class CommentViewController: UIViewController,UITableViewDelegate,UITableViewDat
        }
         return cell!
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+     }
     
 //    var modelComments:CommentsModel?{
 //        didSet{
 //            commentLbl.text = modelComments?.body
 //        }
 //    }
-    @IBAction func back(_ sender: UIButton) {
+    @IBAction func back(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
     }
     

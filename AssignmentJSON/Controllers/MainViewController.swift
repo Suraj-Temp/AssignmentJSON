@@ -49,11 +49,9 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
          cell?.modelPosts = modelPosts
          return cell!
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-         return 100
+        return UITableView.automaticDimension
      }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          let CommentViewController = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
          let modelPosts = viewModelUser.arrPosts[indexPath.row]

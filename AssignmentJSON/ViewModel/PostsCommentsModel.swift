@@ -8,7 +8,13 @@
 
 import Foundation
 
-
+struct APIModel{
+    static let baseUrl = "https://jsonplaceholder.typicode.com"
+}
+struct HTTPMethods{
+    static let httpMethodGET = "GET"
+    static let httpMethodPOST = "POST"
+}
 class PostsCommentsModel{
     
    var URLReqObj:URLRequest!
@@ -20,9 +26,9 @@ class PostsCommentsModel{
    weak var vc2:CommentViewController?
    var postsDetails = Bool()
     
-
    // "https://jsonplaceholder.typicode.com/posts"
    func getAllUserData(){
+       let headers    = [String:String]()
        DispatchQueue.main.async {
          self.vc?.addSplashLoaderView()
        }
@@ -32,9 +38,8 @@ class PostsCommentsModel{
        else{
            endPoint = "/posts"
        }
-       URLSession.shared.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com\(endPoint)")!) { (data, response, error) in
-           if error == nil{
-               if let data = data{
+       UrlSession.shared.APIRequestProfiles(urlStrData: APIModel.baseUrl + endPoint, httpMethods: HTTPMethods.httpMethodGET, headersProfile: headers) { resp,data,err in
+           if err == nil{
                  do{
                    if self.postsDetails == false{
                    let userResponse = try JSONDecoder().decode([CommentsModel].self, from: data)
@@ -65,12 +70,13 @@ class PostsCommentsModel{
                  catch{
                    print(error.localizedDescription)
                   }
-               }
            }
            else{
-               print(error?.localizedDescription)
+               print(err?.localizedDescription,"error")
            }
-       }.resume()
+           
+       }
+
     }
     
     

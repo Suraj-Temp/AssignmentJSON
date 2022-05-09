@@ -17,6 +17,10 @@ class CommentsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var commentsLbl: UILabel!
     
+    @IBOutlet weak var nameLbl: UILabel!
+    
+    @IBOutlet weak var emailLbl: UILabel!
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -25,6 +29,8 @@ class CommentsTableViewCell: UITableViewCell {
     var modelComments:CommentsModel?{
         didSet{
             commentsLbl.text = modelComments?.body
+            nameLbl.text = modelComments?.name
+            emailLbl.text = modelComments?.email
         }
     }
 
